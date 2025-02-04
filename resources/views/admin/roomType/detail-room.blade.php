@@ -16,15 +16,15 @@
                 <div class="form-group">
                     <div class="card">
                         <div class="card-header">
-                            Detail Kamar
+                            Детали номера
                         </div>
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2">{{'Tipe Kamar : ' . ' ' . $data->name}}</h6>
-                            <h6 class="card-subtitle mb-2">{{'Fasilitas Kamar : ' . ' ' . $data->facilities}}</h6>
-                            <h6 class="card-subtitle mb-2">{{'Kapasitas Kasur : ' . '2' }}</h6>
-                            <h6 class="card-subtitle mb-2">{{'Harga Permalam : '}}@currency($data->price)</h6>
-                            <h6 class="card-subtitle mb-2">{{'Доступные номера : ' . ' ' . $jumlahTersedia}}</h6>
-                            <h6 class="card-subtitle mb-2">{{'Keterangan Tipe Kamar : ' . ' ' }} <br>
+                            <h6 class="card-subtitle mb-2">{{'Тип номера: ' . ' ' . $data->name}}</h6>
+                            <h6 class="card-subtitle mb-2">{{'Удобства в номере: ' . ' ' . $data->facilities}}</h6>
+                            <h6 class="card-subtitle mb-2">{{'Вместимость кроватей: ' . '2' }}</h6>
+                            <h6 class="card-subtitle mb-2">{{'Цена за ночь: '}}@currency($data->price)</h6>
+                            <h6 class="card-subtitle mb-2">{{'Доступные номера: ' . ' ' . $jumlahTersedia}}</h6>
+                            <h6 class="card-subtitle mb-2">{{'Описание типа номера: ' . ' ' }} <br>
                                 <p class="ml-3">{{ $data->information }}</p></h6>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <div class="card">
                         <div class="card-header">
-                            Form Booking
+                            Форма бронирования
                         </div>
                         <div class="card-body">
                             @auth
@@ -71,7 +71,7 @@
                             @else
                             <center>
 
-                                <a href="{{ route('login') }}" class="btn btn-warning">Login First</a>
+                                <a href="{{ route('login') }}" class="btn btn-warning">Войдите в систему</a>
                             </center>
                             @endauth
                         </div>

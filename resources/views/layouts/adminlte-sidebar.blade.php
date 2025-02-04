@@ -34,35 +34,44 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <li class="nav-item">
+              <a href="{{route('admindashboard.index')}}" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Главная страница</p>
+              </a>
+          </li>
+
+            <li class="nav-item">
                 <a href="{{route('room.index')}}" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Room</p>
+                    <p>Номер</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{route('roomtype.index')}}" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Room Types</p>
+                    <p>Типы номеров</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{route('roomfacility.index')}}" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Room Facility</p>
+                    <p>Удобства в номере</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{route('hotelfacility.index')}}" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Hotel Facility</p>
+                    <p>Удобства отеля</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.logs' )}}" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Logs</p>
+                    <p>Журнал</p>
                 </a>
             </li>
+
+            
 
           </li>
           <li class="nav-item">
@@ -71,7 +80,7 @@
                           document.getElementById('logout-form').submit();">
                            <i class="fas fa-sign-out-alt nav-icon"></i>
                             <p>
-                               {{ __('Logout') }}
+                               {{ __('Выйти') }}
                             </p>
          </a>
 

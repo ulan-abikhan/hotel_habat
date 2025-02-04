@@ -7,7 +7,7 @@
 				<div class="container">
 					<div class="banner_content text-center">
 						<h6>Вдали от однообразной жизни</h6>
-						<h2>Отель Элеон</h2>
+						<h2>Отель</h2>
 						<p>Чистый, безопасный, комфортный, здоровый отель<br> По доступной цене здесь можно остановиться.</p>
 						<a href="#types" class="btn theme_btn button_hover">Начать</a>
 					</div>

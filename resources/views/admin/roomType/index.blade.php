@@ -16,13 +16,13 @@
         <table id="facilityList" class="table table-bordered">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Information</th>
-                    <th>Foto</th>
-                    <th>Price</th>
-                    <th>Facilities</th>
-                    <th>Action</th>
+                    <th>Номер</th>
+                    <th>Имя</th>
+                    <th>Информация</th>
+                    <th>Фото</th>
+                    <th>Цена</th>
+                    <th>Удобства</th>
+                    <th>Действие</th>
                 </tr>
             </thead>
             <tbody>

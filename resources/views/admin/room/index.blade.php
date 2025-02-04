@@ -16,11 +16,11 @@
         <table id="roomlist" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Room Type</th>
-                    <th>Number</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th>Номер</th>
+                    <th>Тип номера</th>
+                    <th>Номер</th>
+                    <th>Статус</th>
+                    <th>Действие</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,13 +31,13 @@
                         <td>{{ $data->number }}</td>
                         <td>
                             @if ($data->status == 'v')
-                                Available
+                                Доступно
                             @elseif ($data->status == 'o')
-                                Occupied
+                                Занято
                             @elseif ($data->status == 'r')
-                                Reserved
+                                Резервировано
                             @elseif ($data->status == 'os')
-                                Out of Service
+                                В ремонте
                             @endif
                             {{-- {{ $data->status }} --}}
                         </td>

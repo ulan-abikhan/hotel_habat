@@ -11,6 +11,7 @@ use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TransactionController extends Controller
 {
@@ -425,9 +426,21 @@ class TransactionController extends Controller
 
     public function logs()
     {
-        $datas = Log::select("*")
-                            ->orderBy("created_at", "desc")
-                            ->get();;
-        return view('app.log', compact('datas'));
+        $transactions = Payment::select(
+            DB::raw("DATE_FORMAT(STR_TO_DATE(check_in, '%Y-%m-%d'), '%d.%m.%Y') AS check_in"),
+            DB::raw("DATE_FORMAT(STR_TO_DATE(check_out, '%Y-%m-%d'), '%d.%m.%Y') AS check_out"),
+            "price",
+            'users.name'  
+        )->join('transactions', 'payments.transaction_id', 'transactions.id')
+        ->join('users', 'payments.user_id', 'users.id')
+        ->get();
+
+        return view('app.log', compact('transactions'));
+
+
+        // $datas = Log::select("*")
+        //                     ->orderBy("created_at", "desc")
+        //                     ->get();;
+        // return view('app.log', compact('datas'));
     }
 }

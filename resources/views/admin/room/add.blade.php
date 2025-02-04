@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">ROOM ADD</h3>
+      <h3 class="card-title">Добавление номера</h3>
       <!-- /.card-tools -->
       <div class="card-tools">
           <!-- Buttons, labels, and many other things can be placed here! -->
@@ -19,9 +19,9 @@
             <div class="row">
 
                 <div class="form-group col-md-6">
-                    <label for="type_id">Type</label>
+                    <label for="type_id">Тип</label>
                     <select name="type_id" id="type_id" class="form-control @error('type_id') is-invalid @enderror" value="{{ old('type_id') }}" required autocomplete="type_id" autofocus>
-                        <option disabled selected>Select Type of Room...</option>
+                        <option disabled selected>Выберите тип номера...</option>
                         @foreach ($typeRooms as $type)
                             <option value="{{ $type->id }}">{{ $type->name }}</option>
                         @endforeach
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="number">Number</label>
+                    <label for="number">Номер</label>
                     <input id="number" name="number" type="text" class="form-control @error('number') is-invalid @enderror" value="{{ old('number') }}" required autocomplete="number" autofocus>
 
                     @error('number')
@@ -49,7 +49,7 @@
             <div class="form-group float-right row mb-0">
                 <div class="col-md-6">
                     <button type="submit" class="btn btn-primary">
-                        {{ __('Post') }}
+                        {{ __('Создать') }}
                     </button>
 
                 </div>

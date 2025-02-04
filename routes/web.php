@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -59,6 +60,8 @@ Route::group(['middleware' => 'prevent'], function(){
             //CRUD FASILITAS HOTEL
             Route::resource('hotelfacility', HotelFacilityController::class)->except('destroy');
             Route::get('/hotelfacility/delete/{id}', [HotelFacilityController::class, 'destroy'])->name('hotelfacility.delete');
+
+            Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admindashboard.index');
 
         });
 

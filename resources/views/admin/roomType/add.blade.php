@@ -52,7 +52,7 @@
             <div class="row">
 
                 <div class="form-group col-md-6">
-                    <label for="price">Price</label>
+                    <label for="price">Цена</label>
                     <input id="price" name="price" type="text" class="form-control @error('price') is-invalid @enderror" value="{{ old('price') }}" required autocomplete="price" autofocus>
 
                     @error('price')
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="foto">Foto</label>
+                    <label for="foto">Фото</label>
                     <input id="foto" name="foto" type="file" class="form-control @error('foto') is-invalid @enderror"  value="{{ old('foto') }}" required autocomplete="foto" autofocus>
 
                     @error('foto')
@@ -75,7 +75,7 @@
 
             </div>
                 <div class="form-group">
-                    <label for="information">Information</label>
+                    <label for="information">Информация</label>
                     <textarea name="information" class="form-control @error('information') is-invalid @enderror" id="information" rows="3" required autocomplete="information" autofocus>{{ old('information') }}</textarea>
                 @error('information')
                     <span class="invalid-feedback" role="alert">

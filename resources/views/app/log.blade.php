@@ -15,7 +15,7 @@
             <div class="card-header">
                 <h2>
                     <center>
-                        Log Activities
+                        Журнал бронирование
                     </center>
                 </h2>
             </div>
@@ -30,23 +30,23 @@
                             @endif
                                 <thead>
                                     <tr class="text-center">
-                                        <th>No</th>
-                                        <th>Log</th>
-                                        <th>Transaction ID</th>
-                                        <th>Executor ID</th>
-                                        <th>Date Time</th>
+                                        <th>N</th>
+                                        <th>ФИО гостя</th>
+                                        <th>Цена</th>
+                                        <th>Дата прибытие</th>
+                                        <th>Дата выселение</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        @foreach ($datas as $item)
+                                        @foreach ($transactions as $item)
 
                                             <tr class="text-center">
 
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $item->log }}</td>
-                                                <td>{{ $item->transaction_id }}</td>
-                                                <td>{{ $item->executor_id }}</td>
-                                                <td>{{ $item->created_at }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->price }}</td>
+                                                <td>{{ $item->check_in }}</td>
+                                                <td>{{ $item->check_out }}</td>
                                             </tr>
                                         @endforeach
                                 </tbody>

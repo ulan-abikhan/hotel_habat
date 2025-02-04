@@ -18,7 +18,7 @@
             @csrf
             @method('patch')
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Имя</label>
                 <input id="name" value="{{ $data->name }}" name="name" type="text" class="form-control @error('name') is-invalid @enderror" value="{{ $data->name }}" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                 @error('name')
@@ -48,7 +48,7 @@
                     @endforeach
             </div>
             <div class="form-group">
-                <label for="price">Price</label>
+                <label for="price">Цена</label>
                 <input id="price" value="{{ $data->price }}" name="price" type="text" class="form-control @error('price') is-invalid @enderror" value="{{ old('price') }}" required autocomplete="price" autofocus>
 
                 @error('price')
@@ -59,7 +59,7 @@
             </div>
 
             <div class="form-group">
-                <label for="foto">Foto</label>
+                <label for="foto">Фото</label>
                 <img src="{{ asset('images/tipekamar/'.$data->id) }}" width="150px" alt="">
                 <input id="foto" name="foto" type="file" class="form-control @error('foto') is-invalid @enderror" autocomplete="foto" autofocus>
 
@@ -71,7 +71,7 @@
             </div>
 
             <div class="form-group">
-                <label for="information">Information</label>
+                <label for="information">Информация</label>
                 <textarea name="information" class="form-control @error('information') is-invalid @enderror" id="information" rows="3" required autocomplete="information" autofocus>{{ old('information') }}{{ $data->information }}</textarea>
                 @error('information')
                     <span class="invalid-feedback" role="alert">

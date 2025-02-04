@@ -11,10 +11,10 @@
         <table id="facilityList" class="table table-bordered">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Facility Name</th>
-                    <th>Facility Description</th>
-                    <th>Action</th>
+                    <th>Номер</th>
+                    <th>Имя Удобства</th>
+                    <th>Описание Удобства</th>
+                    <th>Действие</th>
                 </tr>
             </thead>
             <tbody>

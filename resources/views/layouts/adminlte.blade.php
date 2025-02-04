@@ -7,7 +7,7 @@
     @hasSection ('title')
         @yield('title')
     @else
-        Отель Элеон App
+        Отель App
     @endif
 </title>
 
@@ -63,7 +63,7 @@
     </div>
 
     <!-- /.content-wrapper -->
-    @include('layouts.adminlte-footer')
+    {{-- @include('layouts.adminlte-footer') --}}
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
